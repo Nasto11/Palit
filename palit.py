@@ -24,6 +24,8 @@ else:
 initial_extensions = [
     'cogs.owner',
     'cogs.help',
+    'cogs.lenny',
+    'cogs.esay',
 ]
 
 
@@ -36,7 +38,7 @@ help_attrs = dict(hidden=True)
 
 prefix = ['!']
 bot = commands.Bot(command_prefix=prefix, description=description, help_attrs=help_attrs, pm_help=True)
-
+client = discord.Client()
 
 bot.remove_command("help")
 
@@ -49,6 +51,7 @@ async def on_ready():
     print('------')
     if not hasattr(bot, 'uptime'):
         bot.uptime = datetime.datetime.utcnow()
+    await bot.change_presence(game=discord.Game(name="Type !commands"))
 
 @bot.event
 async def on_resumed():
@@ -84,8 +87,5 @@ if __name__ == '__main__':
         except Exception as e:
             print('Failed to load extension {}\n{}: {}'.format(extension, type(e).__name__, e))
 
-    bot.run(token)
-    handlers = log.handlers[:]
-    for hdlr in handlers:
-        hdlr.close()
-log.removeHandler(hdlr)
+    
+bot.run(token)
