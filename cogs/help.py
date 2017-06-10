@@ -18,6 +18,7 @@ class Clist:
         embed.add_field(name="!help", value="Displays this. What did ya' think?", inline=False)
         embed.add_field(name="!lenny", value="Shows a lenny. :)", inline=False)
         embed.add_field(name="!esay", value="Makes things you say in embeds!", inline=False)
+        embed.add_field(name="!epenis", value="Shows the accurate penis size of mentioned person.", inline=False)
         embed.set_footer(text="Made by xxx")
         await self.bot.whisper(embed=embed)
 

@@ -26,6 +26,7 @@ initial_extensions = [
     'cogs.help',
     'cogs.lenny',
     'cogs.esay',
+    'cogs.epenis',
 ]
 
 
@@ -36,7 +37,7 @@ handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(me
 logger.addHandler(handler)
 help_attrs = dict(hidden=True)
 
-prefix = ['!']
+prefix = ['!', '<@299190096064937986> ', '<@299190096064937986>']
 bot = commands.Bot(command_prefix=prefix, description=description, help_attrs=help_attrs, pm_help=True)
 client = discord.Client()
 
