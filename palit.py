@@ -22,11 +22,13 @@ else:
     asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
 
 initial_extensions = [
-    'cogs.owner',
+    'cogs.admin',
     'cogs.help',
     'cogs.lenny',
     'cogs.esay',
     'cogs.epenis',
+    'cogs.music',
+    'cogs.ping',
 ]
 
 

@@ -8,7 +8,7 @@ class embedpenis:
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command(hidden=True)
+    @commands.command()
     async def epenis(self, *, user : discord.Member):
         state = random.getstate()
         random.seed(user.id)

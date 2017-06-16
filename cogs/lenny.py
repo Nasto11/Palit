@@ -11,7 +11,7 @@ class Lenny:
     def __init__(self, bot: commands.bot):
         self.bot = bot
 
-    @commands.command(pass_context=True, name="lenny", hidden=True)
+    @commands.command(pass_context=True, name="lenny")
     async def _lenny(self, ctx: commands.Context):
         """Displays a random ASCII face."""
 
